@@ -1,3 +1,16 @@
+
+{% if request.user.is_authenticated %}
+  <p>{{request.user}}</p>
+  {% comment %} <a href="{% url 'logout' %}">Logout</a> {% endcomment %}
+  <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
+    {% csrf_token %}
+    <a href="#" onclick="document.getElementById('logout-form').submit()">Logout</a>
+  </form>
+{% else %}
+  <a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+<hr>
 <h1>My To Do list</h1>
 <a href="{% url 'task-create' %}">Add Task</a>
 
