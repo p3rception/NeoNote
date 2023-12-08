@@ -9,15 +9,12 @@
 
 body {
    background-color: var(--bg);
-   font-family: 'Ubuntu', sans-serif;
+   font-family: 'Afacad', sans-serif;
    padding-top: 100px;
-   font-size: large;
+   font-size: 18px;
    width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-   font-family: 'Raleway', sans-serif;
-}
 
 h3 {
    color: var(--textSoft);
@@ -44,11 +41,12 @@ p {
 
 footer {
    font-family: 'Fira Code', monospace;
-   color: var(--textFooter);
+   /* color: var(--textFooter); */
    position: absolute;
    bottom: 0;
    width: 100%;
    text-align: center;
+   font-size: 14px;
    a {
       text-decoration: none;
       font-weight: normal;
@@ -65,13 +63,15 @@ input {
    justify-content: space-between;
    color: var(--text);
    padding: 10px;
+   padding-left: 20px;
    border-radius: 20px 20px 0 0;
    /* background: linear-gradient(270deg, #00d4ff 0%, #1174ee 35%, #090979 100%);  */
    background: linear-gradient(60deg, #000000, #444444);
 }
 
-.back {
+.header-bar a {
    color: white;
+   font-size: 20px;
 }
 
 .task-wrapper {
