@@ -195,9 +195,12 @@ label {
 
 .card-body {
    padding: 20px;
+   p {
+      color: var(--textSoft);
+   }
 }
 
 .strikethrough {
    text-decoration: none; /* Remove the default strikethrough */
    border-bottom: 5px solid red; /* Add a red bottom border to simulate strikethrough */
- }
+}
