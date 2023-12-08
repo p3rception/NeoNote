@@ -14,7 +14,7 @@ A Django-based task management application.
 
 ## Overview
 
-NeoNote is a task management application built with Django. It allows users to create, update, and delete tasks, as well as register an account and log in to manage their tasks.
+NeoNote is a task management application built with Django. It allows users to create, update, and delete tasks, as well as register an account and log in to manage their tasks. It was created for the [Coding Factory](https://codingfactory.aueb.gr/), a 6-month full-stack educational program of Athens University of Economics and Business.
 
 ## Features
 
