@@ -5,7 +5,10 @@
 *.log
 *.pot
 *.pyc
+*.pyo
+*.pyd
 __pycache__/
+**/__pycache__
 local_settings.py
 # db.sqlite3
 # db.sqlite3-journal
@@ -267,6 +270,9 @@ pyrightconfig.json
 [Ss]cripts
 pyvenv.cfg
 pip-selfcheck.json
+*.pyc
+**/DS_Store
+
 
 ### VisualStudioCode ###
 .vscode/*
