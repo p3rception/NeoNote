@@ -1,5 +1,15 @@
+:root {
+   --bg: #161616;
+   --bgSoft: #1E1E1E;
+   --text: white;
+   --textSoft: #b7bac1;
+   --textFooter: #777777;
+   --input: #2a2a2a;
+}
+
+
 body {
-   background-color: #FAFAFA;
+   background-color: var(--bg);
    font-family: 'Ubuntu', sans-serif;
    padding-top: 100px;
    font-size: large;
@@ -10,25 +20,32 @@ h1, h2, h3, h4, h5, h6 {
    font-family: 'Raleway', sans-serif;
 }
 
-a {
-   font-weight: 600;
+h3 {
+   color: var(--textSoft);
 }
 
-a,p {
-   color: #4b5156
+a {
+   font-weight: 600;
+   color: #007bff;
+   text-decoration: none;
+}
+
+p {
+   color: #4b5156;
 }
 
 .container {
+   border: 2px solid #007bff;
    max-width: 550px;
    margin: auto;
-   background-color: #fff;
+   background-color: var(--bgSoft);
    border-radius: 20px;
-   -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
-   box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+   box-shadow: 0px 0px 15px 0px #007bff;
 }
 
 footer {
    font-family: 'Fira Code', monospace;
+   color: var(--textFooter);
    position: absolute;
    bottom: 0;
    width: 100%;
@@ -42,30 +59,29 @@ footer {
 input {
    outline: none;
    border: none;
-}
+} 
 
 .header-bar {
    display: flex;
    justify-content: space-between;
-   color: #fff;
+   color: var(--text);
    padding: 10px;
    border-radius: 20px 20px 0 0;
-   background: linear-gradient(270deg, #00d4ff 0%, #1174ee 35%, #090979 100%); 
+   /* background: linear-gradient(270deg, #00d4ff 0%, #1174ee 35%, #090979 100%);  */
+   background: linear-gradient(60deg, #000000, #444444);
 }
 
-
-.header-bar a {
-   color: #eee9e9;
-   text-decoration: none;
+.back {
+   color: white;
 }
-
 
 .task-wrapper {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background-color: #fff;
-   border-top: 1px solid #dfe4ea;
+   background-color: var(--bgSoft);
+   border-radius: 0 0 20px 20px;
+   border-top: 3px solid var(--input);
    overflow: hidden;
 }
 
@@ -76,11 +92,13 @@ input {
 
 .task-title a {
    text-decoration: none;
-   color: #4b5156;
+   color: var(--textSoft);
    margin-left: 10px;
 }
 
-.task-complete-icon {
+/* Replaced with fontawesome icons */
+
+/* .task-complete-icon {
    height: 20px;
    width: 20px;
    background-color: #1174ee;
@@ -92,7 +110,7 @@ input {
    width: 20px;
    background-color: rgb(218, 218, 218);
    border-radius: 50%;
-}
+} */
 
 .delete-link {
    text-decoration: none;
@@ -103,11 +121,15 @@ input {
    padding: 20px;
 }
 
+#delete-confirm {
+   color: var(--textSoft);
+}
+
 #add-link {
    color: #1174ee;
    text-decoration: none;
-   font-size: 42px;
-   text-shadow: 1px 1px #090979;
+   font-size: 36px;
+   text-shadow: 0px 0px 15px #007bff;
 }
 
 #search-add-wrapper {
@@ -128,47 +150,27 @@ input[type=text],
 input[type=password],
 textarea {
    font-size: 16px;
-   border: 1px solid #757575;
+   color: var(--textSoft);
+   background-color: var(--input);
    border-radius: 10px;
    padding: 10px;
    width: 90%;
    height: auto;
 }
 
+textarea:focus,
+input[type=text]:focus,
+input[type=password]:focus {
+   border: 2px solid #007bff;
+}
+
 label {
    padding-top: 10px !important;
    display: block;
+   color: var(--textSoft);
 }
-
-::placeholder {
-   font-weight: 300;
-   opacity: 0.5;
-}
-
-/* .button {
-   background-image: linear-gradient(to right, #1A2980 0%, #00d4ff  51%, #1A2980  100%);
-   margin: 10px;
-   padding: 10px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
-   cursor: pointer;
-}
-
-.button:hover {
-   background-position: right center;
-   color: #fff;
-   text-decoration: none;
-} */
-
 
 .button {
-   border: 1px solid #757575;
    background-image: linear-gradient(to right, #1A2980 0%, #00d4ff  51%, #1A2980  100%);
    color: white;   
    background-size: 200% auto;
@@ -178,10 +180,11 @@ label {
    padding: 10px;
    margin: 5px;
    font-weight: bold;
-   font-size: 14px;
+   font-size: 16px;
    border-radius: 10px;
    cursor: pointer;
    text-decoration: none;
+   box-shadow: 2px 2px 15px -2px #007bff;
 }  
 
 .button:hover {
@@ -193,3 +196,8 @@ label {
 .card-body {
    padding: 20px;
 }
+
+.strikethrough {
+   text-decoration: none; /* Remove the default strikethrough */
+   border-bottom: 5px solid red; /* Add a red bottom border to simulate strikethrough */
+ }

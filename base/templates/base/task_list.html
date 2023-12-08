@@ -11,7 +11,7 @@
     {% comment %} <a href="{% url 'logout' %}">Logout</a> {% endcomment %}
     <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
       {% csrf_token %}
-      <a href="#" onclick="document.getElementById('logout-form').submit()">Logout</a>
+      <a href="#" onclick="document.getElementById('logout-form').submit()"><i class="fa-solid fa-right-from-bracket" style="color: #f7fcff;"></i></a>
     </form>
   {% else %}
     <a href="{% url 'login' %}">Login</a>
@@ -23,7 +23,7 @@
     <input type="text" name="search-area" value="{{search_input}}">
     <input id="searchBtn" class="button" type="submit" value="Search">
   </form>
-  <a id="add-link" href="{% url 'task-create' %}">&#x2b;</a>
+  <a id="add-link" href="{% url 'task-create' %}"><i class="fa-solid fa-plus fa-xs"></i></a>
 </div>
 
 
@@ -32,17 +32,17 @@
     <div class="task-wrapper">
       {% if task.complete %}
         <div class="task-title">
-          <div class="task-complete-icon"></div>
-          <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i>
+          <i class="fa-solid fa-square-check" style="color: #007bff;"></i>
+          <i><s style='text-decoration-color: white;'><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i>
         </div>
-        <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
+        <a class="delete-link" href="{% url 'task-delete' task.id %}"><i class="fa-solid fa-trash fa-xs"></i></a>
       
         {% else %}
         <div class="task-title">
-          <div class="task-incomplete-icon"></div>
+          <i class="fa-solid fa-square" style="color: #dadada;"></i>
           <a href="{% url 'task-update' task.id %}">{{task}}</a>
         </div>
-        <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
+        <a class="delete-link" href="{% url 'task-delete' task.id %}"><i class="fa-solid fa-trash fa-xs"></i></a>
       {% endif %}
     </div>
 

@@ -2,14 +2,19 @@
 {% block content %}
 
 <div class="header-bar">
-   <a href="{% url 'tasks' %}">&#8592; Back</a>
+   <a class='back' href="{% url 'tasks' %}"><i class="fa-solid fa-backward" style="color: #f7fcff;"></i> Back</a>
 </div>
 
 <div class="card-body">
    <form method="POST" action="">
       {% csrf_token %}
-      {{form.as_p}}
-      <input class="button" type="submit" value="Submit">
+      {% comment %} {{form.as_p}} {% endcomment %}
+      <label style="margin-bottom: 5px;">{{form.title.label}}</label>
+      {{form.title}}
+
+      <label style="margin-bottom: 5px; margin-top: 10px;">{{form.description.label}}</label>
+      {{form.description}}
+      <input style="margin-top:20px;" class="button" type="submit" value="Submit">
    </form>
 </div>
 
