@@ -76,10 +76,14 @@ NeoNote is a task management application built with Django. It allows users to c
 
 ## Usage
 
-1. Visit the application in your web browser.
-2. Register for an account or log in if you already have one.
-3. Manage your tasks - create, update, and delete tasks as needed.
-4. Log out when done.
+### Register
+![](./demo/register.gif)
+### Login & Logout
+![](./demo/login-logout.gif)
+### Create & Edit tasks
+![](./demo/create-edit-tasks.gif)
+### Search & Delete tasks
+![](./demo/search-delete-tasks.gif)
 
 ## Author
 
