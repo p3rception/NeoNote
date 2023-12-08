@@ -102,12 +102,14 @@ input {
 .task-title {
    display: flex;
    padding: 20px;
-}
-
-.task-title a {
-   text-decoration: none;
-   color: var(--textSoft);
-   margin-left: 10px;
+   a {
+      text-decoration: none;
+      color: var(--textSoft);
+      margin-left: 10px;
+   }
+   i {
+      transform: translateY(3px);
+   }
 }
 
 /* Replaced with fontawesome icons */
