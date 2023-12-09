@@ -88,3 +88,7 @@ NeoNote is a task management application built with Django. It allows users to c
 ## Author
 
 Dimitris Pergelidis ([p3rception](https://github.com/p3rception))
+
+## Disclaimer
+
+The README.md template was created with the help of Bard, a language model from Google AI.
