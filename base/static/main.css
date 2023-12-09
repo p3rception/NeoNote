@@ -1,3 +1,4 @@
+/*--------- Custom CSS variables -----------*/
 :root {
    --bg: #111111;
    --bgSoft: #161616;
@@ -7,6 +8,7 @@
    --input: #202020;
 }
 
+/*--------- Body styling and background image -----------*/
 body {
    /* background-color: #111111; */
    background-image: url(./images/bg-neon.png);
@@ -14,7 +16,6 @@ body {
    background-size: 100% 100%;
    background-repeat: no-repeat;
    font-family: 'Afacad', sans-serif;
-   /* padding-top: 100px; */
    font-size: 18px;
    width: 100%;
    height: 100vh;
@@ -25,6 +26,7 @@ h1 {
    font-size: 40px;
    background: -webkit-linear-gradient(#00d4ff, #1A2980);
    -webkit-background-clip: text;
+   background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
@@ -42,6 +44,7 @@ p {
    color: #4b5156;
 }
 
+/*--------- Styling for main container -----------*/
 .container {
    border: 2px solid #007bff;
    max-width: 550px;
@@ -52,6 +55,7 @@ p {
    box-shadow: 0px 0px 30px 0px #007bff;
 }
 
+/*--------- Styling for footer -----------*/
 footer {
    font-family: 'Fira Code', monospace;
    /* color: var(--textFooter); */
@@ -64,16 +68,20 @@ footer {
       text-decoration: none;
       font-weight: normal;
       background: -webkit-linear-gradient(#00d4ff, #007bff);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
    }
 } 
 
+/*--------- Styling for input elements -----------*/
 input {
    outline: none;
    border: none;
 } 
 
+
+/*--------- Styling for the header bar -----------*/
 .header-bar {
    display: flex;
    justify-content: space-between;
@@ -89,10 +97,13 @@ input {
    color: white;
    font-size: 20px;
    background: -webkit-linear-gradient(#00d4ff, #1A2980);
+   background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
+
+/*--------- Styling for tasks -----------*/
 .task-wrapper {
    display: flex;
    align-items: center;
@@ -152,6 +163,7 @@ input {
    cursor: pointer;
    /* color: #1174ee; */
    background: -webkit-linear-gradient(#00d4ff, #1A2980);
+   background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
@@ -194,6 +206,8 @@ label {
    color: var(--textSoft);
 }
 
+
+/*--------- Styling for buttons -----------*/
 .button {
    background-image: linear-gradient(to right, #1A2980 0%, #00d4ff  51%, #1A2980  100%);
    color: white;   
@@ -217,6 +231,7 @@ label {
    text-decoration: none;
 }
 
+/*--------- Styling for card body -----------*/
 .card-body {
    padding: 20px;
    p {
@@ -224,12 +239,8 @@ label {
    }
    a {
       background: -webkit-linear-gradient(#00d4ff, #044892);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
    }
-}
-
-.strikethrough {
-   text-decoration: none; /* Remove the default strikethrough */
-   border-bottom: 5px solid red; /* Add a red bottom border to simulate strikethrough */
 }
