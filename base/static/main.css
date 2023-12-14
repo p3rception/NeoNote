@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-   font-size: 40px;
+   font-size: 45px;
    background: -webkit-linear-gradient(#00d4ff, #1A2980);
    -webkit-background-clip: text;
    background-clip: text;
@@ -81,7 +81,7 @@ input {
 } 
 
 
-/*--------- Styling for the header bar -----------*/
+/*--------- Styling for header bar -----------*/
 .header-bar {
    display: flex;
    justify-content: space-between;
@@ -90,7 +90,7 @@ input {
    padding-left: 20px;
    border-radius: 20px 20px 0 0;
    /* background: linear-gradient(270deg, #00d4ff 0%, #1174ee 35%, #090979 100%);  */
-   background: linear-gradient(60deg, #111111, #161616);
+   background: linear-gradient(60deg, #111111, #2b2b2b);
 }
 
 .header-bar a {
@@ -242,5 +242,64 @@ label {
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+   }
+}
+
+/*--------- Landing Page -----------*/
+.landing-header-bar {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: var(--text);
+   padding: 10px;
+   padding-left: 20px;
+   border-radius: 20px 20px 0 0;
+   background: linear-gradient(60deg, #111111, #2b2b2b);
+   h1 {
+      font-size: 50px;
+   }
+}
+
+.landing-body {
+   font-family: Arial, sans-serif;
+   ul {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+   ul li {
+      position: relative;
+      list-style: none;
+   }
+   ul li a {
+      font-size: 40px;
+      text-decoration: none;
+      letter-spacing: 2px;
+      line-height: 50px;
+      text-transform: uppercase;
+      /* background: -webkit-linear-gradient(white, black); */
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+   }
+   ul li a::before {
+      content: attr(data-text);
+      position: absolute;
+      color: var(--clr);
+      width: 0;
+      overflow: hidden;
+      transition: 1s;
+      border-right: 5px solid var(--clr);
+      background: -webkit-linear-gradient(#00d4ff, #044892);
+      background-clip: text;
+      -webkit-text-stroke: 0px var(--clr);
+   }
+   ul li a:hover::before {
+      width: 50%;
+      filter: drop-shadow(0 0 25px var(--clr))
    }
 }

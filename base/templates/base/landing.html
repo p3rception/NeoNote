@@ -1,0 +1,19 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="landing-header-bar">
+   <h1>Welcome to NeoNote!</h1>
+</div>
+
+<div class="landing-body">
+   <ul>
+      <li style="--clr:#0C86C5">
+      <a href="{% url 'login' %}" data-text="&nbsp;Login">&nbsp;Login&nbsp;</a>
+      </li>
+      <li style="--clr:#0C86C5">
+      <a href="{% url 'register' %}" data-text="&nbsp;Register">&nbsp;Register&nbsp;</a>
+      </li>
+   </ul>
+</div>
+
+{% endblock content %}
