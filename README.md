@@ -4,13 +4,11 @@
 A Django-based task management application.
 
 ## Table of Contents
-- [NeoNote](#neonote)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Author](#author)
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Author](#author)
 
 ## Overview
 
